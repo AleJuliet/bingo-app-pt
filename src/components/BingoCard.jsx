@@ -2,11 +2,18 @@ import React, { useState, useEffect } from "react";
 import "./BingoCard.css";
 import cards from "../assets/cards.json";
 
+import { useSave } from "../hooks/useSave.ts";
+
 const BingoCard = ({ cardId }) => {
   const [card, setCard] = useState([]);
   const [marked, setMarked] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
+  const { load, save } = useSave({ cardId, saveId: 0, });
+
+  // Mounting hook
   useEffect(() => {
+    // Select card
     const cardIndex = parseInt(cardId) % cards.length; // Wrap around for invalid card IDs
     const selectedCard = cards[cardIndex];
     setCard(selectedCard);
@@ -16,7 +23,17 @@ const BingoCard = ({ cardId }) => {
       row.map((num) => false)
     );
     setMarked(initialMarkedState);
-  }, [cardId]);
+
+    // Attempt loading of saved state
+    const savedState = load();
+    if (savedState !== null) setMarked(savedState);
+    setIsLoading(false);
+  }, []);
+
+  // Save state on marking change
+  useEffect(() => {
+    if (!isLoading) save(marked);
+  }, [marked]);
 
   const toggleNumber = (rowIndex, colIndex) => {
     const updatedMarked = [...marked];
