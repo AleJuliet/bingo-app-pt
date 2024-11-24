@@ -8,7 +8,8 @@ function App() {
   const CardWrapper = () => {
     const query = useQuery();
     const cardId = query.get("card");
-    return <BingoCard cardId={cardId} />;
+    if (cardId === undefined) <div>Error reading card id!</div>;
+    return <BingoCard cardId={cardId} />;    
   };
 
   return (
