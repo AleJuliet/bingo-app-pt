@@ -1,3 +1,5 @@
+import { CardMarked } from "../components/BingoCard";
+
 interface UseSaveProps {
 	cardId: number;
 	saveId: number;
@@ -12,7 +14,7 @@ export const useSave = (props: UseSaveProps) => {
 		return JSON.parse(save);
 	}
 
-	const save = (cardState: Array<number>) => {
+	const save = (cardState: CardMarked) => {
 		if (props.cardId && props.saveId !== undefined && cardState !== undefined) {
 			console.log('saving');
 			localStorage.setItem(encodeSaveId(props.cardId.toString(), props.saveId.toString()), JSON.stringify(cardState));
