@@ -38,6 +38,27 @@
     color: white;
   }
 
+  .bingo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .bingo-buttons button {
+    background-color: #e14a2f;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .bingo-buttons button:hover {
+    background-color: #8d3221;
+  }
+
   @media (max-width: 768px) {
     .bingo-cell {
       font-size: 12px;
