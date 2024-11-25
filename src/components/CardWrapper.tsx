@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
+import BingoCard from "./BingoCard.tsx";
+
 import cards from "../assets/cards.json";
 
 function CardWrapper() {
