@@ -49,8 +49,10 @@ const BingoCard = ({ cardId }) => {
 
   //Clears card array
   const clearCard = () => {
-    const initialMarkedState = card.map((row) => row.map((num) => false));
-    setMarked(initialMarkedState);
+    if (window.confirm("Are you sure you want to clear the Bingo card?")) {
+      const initialMarkedState = card.map((row) => row.map((num) => false));
+      setMarked(initialMarkedState);
+    }
   }
 
   //Uses the screenshot hook to download the image
