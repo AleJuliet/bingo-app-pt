@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import "./BingoCard.css";
 import cards from "../assets/cards.json";
+import { useScreenshot, createFileName } from "use-react-screenshot";
 
 import { useSave } from "../hooks/useSave.ts";
 
@@ -8,6 +9,11 @@ const BingoCard = ({ cardId }) => {
   const [card, setCard] = useState([]);
   const [marked, setMarked] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const ref = createRef(null);
+  const [image, takeScreenShot] = useScreenshot({
+    type: "image/jpeg",
+    quality: 1.0
+  });
 
   const { load, save } = useSave({ cardId, saveId: 0, });
 
@@ -41,34 +47,45 @@ const BingoCard = ({ cardId }) => {
     setMarked(updatedMarked);
   };
 
+  //Clears card array
   const clearCard = () => {
-    //
+    const initialMarkedState = card.map((row) => row.map((num) => false));
+    setMarked(initialMarkedState);
   }
 
-  const copyToClipboard = () => {
-    //
-  }
+  //Uses the screenshot hook to download the image
+  const download = (image, { name = "bingoWinnerCard", extension = "jpg" } = {}) => {
+    const a = document.createElement("a");
+    a.href = image;
+    a.download = createFileName(extension, name);
+    a.click();
+  };
+
+  //Takes a screenshot of the card and downloads it
+  const copyToClipboard = () => takeScreenShot(ref.current).then(download);
 
   return (
     <div>
-      <div className="bingo-card">
-      {card.map((row, rowIndex) => (
-        <div key={rowIndex} className="bingo-row">
-          {row.map((num, colIndex) => (
-            <div
-              key={colIndex}
-              className={`bingo-cell ${
-                marked[rowIndex][colIndex] ? "marked" : ""
-              } ${num ? "" : "empty"}`}
-              onClick={() => {
-                if (num) toggleNumber(rowIndex, colIndex);
-              }}
-            >
-              {num || ""}
-            </div>
-          ))}
+      <div class="bingo-card-wrapper">
+        <div className="bingo-card" ref={ref}>
+        {card.map((row, rowIndex) => (
+          <div key={rowIndex} className="bingo-row">
+            {row.map((num, colIndex) => (
+              <div
+                key={colIndex}
+                className={`bingo-cell ${
+                  marked[rowIndex][colIndex] ? "marked" : ""
+                } ${num ? "" : "empty"}`}
+                onClick={() => {
+                  if (num) toggleNumber(rowIndex, colIndex);
+                }}
+              >
+                {num || ""}
+              </div>
+            ))}
+          </div>
+        ))}
         </div>
-      ))}
       </div>
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
