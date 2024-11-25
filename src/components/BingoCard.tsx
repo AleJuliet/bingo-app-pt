@@ -16,6 +16,7 @@ const BingoCard = ({ card, cardIndex }: BingoCardProps) => {
   const [marked, setMarked] = useState<CardMarked>([]);
   const [isLoading, setIsLoading] = useState(true);
   const ref = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [image, takeScreenShot] = useScreenshot({
     type: "image/jpeg",
     quality: 1.0
@@ -35,12 +36,13 @@ const BingoCard = ({ card, cardIndex }: BingoCardProps) => {
     const savedState = load();
     if (savedState !== null) setMarked(savedState);
     setIsLoading(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Save state on marking change
   useEffect(() => {
     if (!isLoading) save(marked);
-  }, [marked]);
+  }, [isLoading, marked, save]);
 
   const toggleNumber = (rowIndex, colIndex) => {
     const updatedMarked = [...marked];
