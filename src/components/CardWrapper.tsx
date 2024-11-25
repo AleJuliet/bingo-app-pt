@@ -34,7 +34,7 @@ function CardWrapper() {
   return (
     <div className="App">
       <div className="card-container">
-        <h1>Bingo Card nº {cardId}</h1>
+        <h1>Bingo Card nº <strong>{cardId}</strong></h1>
         {card ? <BingoCard card={card} cardIndex={cardId} onCardDeselect={onCardDeselect} /> : <div>Error loading card!</div>}
       </div>
     </div>);
