@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./BingoCard.css";
 import { useScreenshot, createFileName } from "use-react-screenshot";
 
 import { useSave } from "../hooks/useSave.ts";
+
+import "./BingoCard.css";
 
 export type Card = (number | null)[][];
 export type CardMarked = boolean[][];
@@ -10,9 +11,10 @@ export type CardMarked = boolean[][];
 interface BingoCardProps {
   cardIndex: number;
   card: Card;
+  onCardDeselect: () => void;
 }
 
-const BingoCard = ({ card, cardIndex }: BingoCardProps) => {
+const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [marked, setMarked] = useState<CardMarked>([]);
   const [isLoading, setIsLoading] = useState(true);
   const ref = useRef(null);
@@ -98,6 +100,7 @@ const BingoCard = ({ card, cardIndex }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
+        <button onClick={onCardDeselect}>Pick another card</button>
       </div>
     </div>
   );
