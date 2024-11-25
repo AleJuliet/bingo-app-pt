@@ -8,7 +8,6 @@ html, body, #root {
   background-image: url('assets/img/backgroundChristmas.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
 }
 
 .card-container {
