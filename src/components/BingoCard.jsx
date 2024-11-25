@@ -41,8 +41,17 @@ const BingoCard = ({ cardId }) => {
     setMarked(updatedMarked);
   };
 
+  const clearCard = () => {
+    //
+  }
+
+  const copyToClipboard = () => {
+    //
+  }
+
   return (
-    <div className="bingo-card">
+    <div>
+      <div className="bingo-card">
       {card.map((row, rowIndex) => (
         <div key={rowIndex} className="bingo-row">
           {row.map((num, colIndex) => (
@@ -60,6 +69,11 @@ const BingoCard = ({ cardId }) => {
           ))}
         </div>
       ))}
+      </div>
+      <div className="bingo-buttons">
+        <button onClick={clearCard}>Clear card</button>
+        <button onClick={copyToClipboard}>Copy to clipboard</button>
+      </div>
     </div>
   );
 };
