@@ -100,7 +100,8 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
-        <button onClick={onCardDeselect}>Pick another card</button>
+        {/*<button onClick={onCardDeselect}>Pick another card</button>*/
+        }
       </div>
     </div>
   );
