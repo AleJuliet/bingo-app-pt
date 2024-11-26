@@ -1,25 +1,41 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
-import BingoCard from "./BingoCard.tsx";
+import BingoCard, { Card } from "./BingoCard.tsx";
+import CardSelection from "./CardSelection.tsx";
 
 import cards from "../assets/cards.json";
 
 function CardWrapper() {
-  const useQuery = () => new URLSearchParams(useLocation().search);
-  const query = useQuery();
-  const cardId = query.get("card");
+  const [cardId, setCardId] = useState<number | null>(null);
+  const [card, setCard] = useState<Card | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  if (!cardId) return <div>Error reading card id!</div>;
+  useEffect(() => {
+    const cardIdParam = searchParams.get('cardId');
+    if (cardIdParam) {
+      const cardIndex = parseInt(cardIdParam) % cards.length; // Wrap around for invalid card IDs
+      setCardId(cardIndex);
+      setCard(cards[cardIndex]);
+    } else {
+      setCardId(null);
+      setCard(null);
+    }
+  }, [searchParams]);
 
-  const cardIndex = parseInt(cardId) % cards.length; // Wrap around for invalid card IDs
-  const selectedCard = cards[cardIndex];
+  const onCardSelect = (cardId: number) => {
+    setSearchParams({ 'cardId': cardId.toString() });
+  }
+
+  const onCardDeselect = () => setSearchParams();
+
+  if (!cardId) return <CardSelection onCardSelect={onCardSelect}/>;
 
   return (
     <div className="App">
       <div className="card-container">
-        <h1>Bingo Card nº {cardId}</h1>
-        {selectedCard ? <BingoCard card={selectedCard} cardIndex={cardIndex} /> : <div>Error loading card!</div>}
+        <h1>Bingo Card nº <strong>{cardId}</strong></h1>
+        {card ? <BingoCard card={card} cardIndex={cardId} onCardDeselect={onCardDeselect} /> : <div>Error loading card!</div>}
       </div>
     </div>);
 };
