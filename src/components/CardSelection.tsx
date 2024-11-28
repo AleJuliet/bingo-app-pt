@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import "./CardSelection.css";
-import { useSave } from "../hooks/useSave";
 
 export interface CardSelectionProps {
   onCardSelect: (cardIndex: number) => void;
