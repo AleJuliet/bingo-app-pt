@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./CardSelection.css";
+import { useSave } from "../hooks/useSave";
 
 export interface CardSelectionProps {
   onCardSelect: (cardIndex: number) => void;
@@ -9,12 +10,22 @@ export interface CardSelectionProps {
 const cardIndexes = [...Array(61).keys()].slice(1);
 
 function CardSelection({ onCardSelect }: CardSelectionProps) {
+  const [saves, setSaves] = useState<Array<string>>();
+
+  useEffect(() => {
+    const saves = Object.keys(localStorage).map((k) => k.split('-')[0]);
+    console.log(saves);
+    setSaves(saves);
+  }, []);
+
   return (
     <div className="card-selection">
       <p className="card-selection-title">Please select a bingo card!</p>
       <div className="selection-container">
         {cardIndexes.map((n) => 
-          (<input className="card-select" type="button" key={n}
+          (<input
+            type="button" key={n}
+            className={`card-select${saves?.includes(n.toString()) ? ' has-save' : ''}`}
             value={n} onClick={(e) => onCardSelect(parseInt((e.target as HTMLInputElement).value))}
           />)
         )}
