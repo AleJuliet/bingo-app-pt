@@ -19,10 +19,8 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const ref = useRef(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [image, takeScreenShot] = useScreenshot({
-    type: "image/jpeg",
-    quality: 1.0
-  });
+  const [image, takeScreenShot] = useScreenshot();
+  const [error, setError] = useState<string>();
 
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });
 
@@ -119,6 +117,12 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
         {/*<button onClick={onCardDeselect}>Pick another card</button>*/
         }
       </div>
+      {error ?
+        <div className="error-message">
+          <span>{error}</span>
+          <input type="button" className="dismiss-button" onClick={() => setError('')} value="X" />
+        </div>
+      : null}
     </div>
   );
 };
