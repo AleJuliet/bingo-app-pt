@@ -4,6 +4,7 @@
   align-items: center;
   margin: auto;
 }
+
 .bingo-card {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -64,6 +65,18 @@
 
 .bingo-buttons button:hover {
   background-color: #8d3221;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: 0;
+  background-color: transparent;
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -73,6 +73,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
 
   return (
     <div>
+      <button className="back-button" onClick={onCardDeselect}>Back</button>
       <div className="bingo-card-wrapper">
         <div className="bingo-card" ref={ref}>
           {
@@ -100,8 +101,6 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
-        {/*<button onClick={onCardDeselect}>Pick another card</button>*/
-        }
       </div>
     </div>
   );
