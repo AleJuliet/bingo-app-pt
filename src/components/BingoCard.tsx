@@ -19,10 +19,8 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const ref = useRef(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [image, takeScreenShot] = useScreenshot({
-    type: "image/jpeg",
-    quality: 1.0
-  });
+  const [image, takeScreenShot] = useScreenshot();
+  const [error, setError] = useState<string>();
 
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });
 
@@ -71,6 +69,21 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   //Takes a screenshot of the card and downloads it
   const downloadScreenshot = () => takeScreenShot(ref.current).then(download);
 
+  const copyScreenshot = async () => {
+    try {
+      const screenshotURI = await takeScreenShot(ref.current);
+      // Converts URI data string to a blob
+      const blob = await ((await fetch(screenshotURI)).blob());
+      if (ClipboardItem.supports("image/png")) {
+        const data = [new ClipboardItem({ 'image/png': blob })];
+        navigator.clipboard.write(data);
+        console.log('copied png blob to clipboard!');
+      }
+    } catch (e) {
+      setError("Error copying to clipboard.");
+    }
+  }
+
   return (
     <div>
       <button className="back-button" onClick={onCardDeselect}>Back</button>
@@ -101,7 +114,14 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
+        <button onClick={copyScreenshot}>Copy card image</button>
       </div>
+      {error ?
+        <div className="error-message">
+          <span>{error}</span>
+          <input type="button" className="dismiss-button" onClick={() => setError('')} value="X" />
+        </div>
+      : null}
     </div>
   );
 };
