@@ -1,0 +1,28 @@
+.card-selection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-selection-title {
+    color: darkgreen;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.selection-container {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(auto-fit, minmax(160p, 1fr));
+    gap: 1rem;
+}
+
+.card-select {
+    border: 2px solid green;
+    color: green;
+    border-radius: 0.9rem;
+    cursor: pointer;
+}
