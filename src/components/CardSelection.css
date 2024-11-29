@@ -26,3 +26,8 @@
     border-radius: 0.9rem;
     cursor: pointer;
 }
+
+.has-save {
+    text-decoration: underline;
+    font-weight: 600;
+}
