@@ -13,7 +13,7 @@ function CardSelection({ onCardSelect }: CardSelectionProps) {
 
   useEffect(() => {
     const saves = Object.keys(localStorage).map((k) => k.split('-')[0]);
-    console.log(saves);
+    //console.log(saves);
     setSaves(saves);
   }, []);
 
