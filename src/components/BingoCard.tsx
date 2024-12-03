@@ -74,10 +74,10 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       const screenshotURI = await takeScreenShot(ref.current);
       // Converts URI data string to a blob
       const blob = await ((await fetch(screenshotURI)).blob());
-      if (ClipboardItem.supports("image/png")) {
+      // NOTE: Safari doesn't support ClipboardItem.supports()
+      if (ClipboardItem?.supports("image/png") !== false) {
         const data = [new ClipboardItem({ 'image/png': blob })];
         navigator.clipboard.write(data);
-        //console.log('copied png blob to clipboard!');
       }
     } catch (e) {
       console.error(e);
