@@ -80,6 +80,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
         console.log('copied png blob to clipboard!');
       }
     } catch (e) {
+      console.error(e);
       setError("Error copying to clipboard.");
     }
   }
