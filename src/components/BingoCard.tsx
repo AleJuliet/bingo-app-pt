@@ -77,7 +77,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       if (ClipboardItem.supports("image/png")) {
         const data = [new ClipboardItem({ 'image/png': blob })];
         navigator.clipboard.write(data);
-        console.log('copied png blob to clipboard!');
+        //console.log('copied png blob to clipboard!');
       }
     } catch (e) {
       console.error(e);
@@ -87,7 +87,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
 
   return (
     <div>
-      <button className="back-button" onClick={onCardDeselect}>Back</button>
+      {/* <button className="back-button" onClick={onCardDeselect}>Back</button> */}
       <div className="bingo-card-wrapper">
         <div className="bingo-card" ref={ref}>
           {

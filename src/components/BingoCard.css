@@ -87,6 +87,10 @@
     width: auto; /* Adjust width */
     margin: 20px;
   }
+  .bingo-buttons {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .error-message {
