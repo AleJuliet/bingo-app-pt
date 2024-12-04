@@ -115,7 +115,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
-        <button onClick={copyScreenshot}>Copy card image</button>
+        <button onClick={copyScreenshot} className="copyCard">Copy card image</button>
       </div>
       {error ?
         <div className="error-message">
