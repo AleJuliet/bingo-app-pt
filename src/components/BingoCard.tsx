@@ -115,7 +115,12 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
       <div className="bingo-buttons">
         <button onClick={clearCard}>Clear card</button>
         <button onClick={downloadScreenshot}>Download card image</button>
+        {!(
+            navigator.userAgent.includes("Safari") &&
+            !navigator.userAgent.includes("Chrome")
+          )&&
         <button onClick={copyScreenshot} className="copyCard">Copy card image</button>
+        }
       </div>
       {error ?
         <div className="error-message">
