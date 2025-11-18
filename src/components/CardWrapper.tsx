@@ -7,19 +7,17 @@ import CardSelection from "./CardSelection.tsx";
 import cards from "../assets/cards.json";
 
 function CardWrapper() {
-  const [cardId, setCardId] = useState<number | null>(null);
   const [card, setCard] = useState<Card | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const cardId = parseInt(searchParams.get('cardId') || "0");
+
   useEffect(() => {
-    const cardIdParam = searchParams.get('cardId');
-    if (cardIdParam) {
-      const cardIndex = parseInt(cardIdParam) % cards.length; // Wrap around for invalid card IDs
-      setCardId(cardIndex);
-      setCard(cards[cardIndex]);
-    } else {
-      setCardId(null);
+    if (cardId < 1 || cardId >= cards.length) {
+      console.error(`Invalid cardId: ${cardId}`);
       setCard(null);
+    } else {
+      setCard(cards[cardId]);
     }
   }, [searchParams]);
 
@@ -29,13 +27,13 @@ function CardWrapper() {
 
   const onCardDeselect = () => setSearchParams();
 
-  if (!cardId) return <CardSelection onCardSelect={onCardSelect}/>;
+  if (!card) return <CardSelection onCardSelect={onCardSelect}/>;
 
   return (
     <div className="App">
       <div className="card-container">
         <h1>Bingo Card nº <strong>{cardId}</strong></h1>
-        {card ? <BingoCard card={card} cardIndex={cardId} onCardDeselect={onCardDeselect} /> : <div>Error loading card!</div>}
+        <BingoCard card={card} cardIndex={cardId} onCardDeselect={onCardDeselect} />
       </div>
     </div>);
 };
