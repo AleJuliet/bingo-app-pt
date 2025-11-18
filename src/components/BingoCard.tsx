@@ -44,7 +44,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
     if (!isLoading) save(marked);
   }, [isLoading, marked, save]);
 
-  const toggleNumber = (rowIndex, colIndex) => {
+  const toggleNumber = (rowIndex: number, colIndex: number) => {
     const updatedMarked = [...marked];
     updatedMarked[rowIndex][colIndex] = !updatedMarked[rowIndex][colIndex];
     setMarked(updatedMarked);
@@ -59,7 +59,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   }
 
   //Uses the screenshot hook to download the image
-  const download = (image, { name = "bingoWinnerCard", extension = "jpg" } = {}) => {
+  const download = (image: string, { name = "bingoWinnerCard", extension = "jpg" } = {}) => {
     const a = document.createElement("a");
     a.href = image;
     a.download = createFileName(extension, name);
