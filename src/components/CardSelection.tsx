@@ -16,6 +16,7 @@ function CardSelection({ onCardSelect }: CardSelectionProps) {
     const saves = Object.keys(localStorage).map((k) => k.split('-')[0]);
     //console.log(saves);
     setSaves(saves);
+    
   }, []);
 
   return (
