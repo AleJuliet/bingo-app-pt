@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import "./CardSelection.css";
+import cards from "../assets/cards.json";
 
 export interface CardSelectionProps {
   onCardSelect: (cardIndex: number) => void;
 }
 
-const cardIndexes = [...Array(61).keys()].slice(1);
+const cardIndexes = [...Array(cards.length + 1).keys()].slice(1);
 
 function CardSelection({ onCardSelect }: CardSelectionProps) {
   const [saves, setSaves] = useState<Array<string>>();
@@ -15,6 +16,7 @@ function CardSelection({ onCardSelect }: CardSelectionProps) {
     const saves = Object.keys(localStorage).map((k) => k.split('-')[0]);
     //console.log(saves);
     setSaves(saves);
+    
   }, []);
 
   return (
