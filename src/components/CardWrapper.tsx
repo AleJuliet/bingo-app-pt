@@ -29,10 +29,16 @@ function CardWrapper() {
 
   if (!card) return <CardSelection onCardSelect={onCardSelect}/>;
 
+  const currentDate = new Date().toLocaleDateString('en-US', { 
+    month: 'long', 
+    day: 'numeric',
+    timeZone: 'Europe/Paris'
+  });
+
   return (
     <div className="App">
       <div className="card-container">
-        <h1>Bingo Card nº <strong>{cardId}</strong></h1>
+        <h1>Bingo Card nº <strong>{cardId}</strong> - {currentDate}</h1>
         <BingoCard card={card} cardIndex={cardId} onCardDeselect={onCardDeselect} />
       </div>
     </div>);
