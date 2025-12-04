@@ -12,6 +12,7 @@ interface Particle {
 	gravity: number;
 	life: number;
 	color: string;
+	size: number;
 }
 
 const createCanvasElement = (): HTMLCanvasElement => {
@@ -56,7 +57,6 @@ export const useConfetti = (config: ConfettiConfig) => {
 					y: particle.y + particle.vy,
 					vy: particle.vy + particle.gravity,
 					life: particle.life - 1,
-					color: particle.color,
 				}
 			});
 
@@ -64,7 +64,7 @@ export const useConfetti = (config: ConfettiConfig) => {
 
 			updatedParticles.forEach((particle) => {
 				canvasContext.fillStyle = particle.color;
-				canvasContext.fillRect(particle.x, particle.y, 30, 30);
+				canvasContext.fillRect(particle.x, particle.y, particle.size, particle.size);
 			});
 
 			requestAnimationFrameRef.current = requestAnimationFrame(draw);
@@ -86,6 +86,7 @@ export const useConfetti = (config: ConfettiConfig) => {
 				vy: (Math.random() * -10) * 3,
 				gravity: config.gravity,
 				life: 1000,
+				size: (Math.random() * 25) + 5,
 				color: `hsl(${Math.random() * 360}, 100%, 50%)`
 			}
 

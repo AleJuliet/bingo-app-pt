@@ -65,10 +65,10 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
             })
-        }, 300);
+        }, 200);
         setTimeout(() => {
           window.clearInterval(intervalId);
-        }, 5000);
+        }, 8000);
       }
     }
     setMarked(updatedMarked);
