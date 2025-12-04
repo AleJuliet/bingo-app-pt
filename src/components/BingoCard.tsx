@@ -24,9 +24,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [error, setError] = useState<string>();
 
   const { throwConfetti } = useConfetti({
-    imagePath: "",
-    size: 0,
-    weight: 0
+    gravity: 0.8,
   });
 
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });
@@ -55,6 +53,23 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
     updatedMarked[rowIndex][colIndex] = !updatedMarked[rowIndex][colIndex];
     if (updatedMarked[rowIndex][colIndex]) {
       throwConfetti(5, coordinates);
+      let bingo = true;
+      for (let rowIndex = 0; rowIndex < card.length; rowIndex++) {
+        for (let colIndex = 0; colIndex < card[rowIndex].length; colIndex++) {
+          if (card[rowIndex][colIndex] !== null && !updatedMarked[rowIndex][colIndex]) bingo = false;
+        }
+      }
+      if (bingo) {
+        const intervalId = window.setInterval(() => {
+            throwConfetti(3, {
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+            })
+        }, 200);
+        setTimeout(() => {
+          window.clearInterval(intervalId);
+        }, 8000);
+      }
     }
     setMarked(updatedMarked);
   };
