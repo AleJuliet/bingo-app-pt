@@ -1,5 +1,11 @@
 import { useCallback, useEffect, useRef } from "react";
 
+export interface ConfettiConfig {
+	imagePath: string;
+	size: number;
+	weight: number;
+}
+
 interface Particle {
 	x: number;
 	vx: number;
@@ -23,7 +29,7 @@ const createCanvasElement = (): HTMLCanvasElement => {
 	return canvas;
 }
 
-export const useConfetti = () => {
+export const useConfetti = (config: ConfettiConfig) => {
 	const canvasRef = useRef<null | HTMLCanvasElement>(null);
 	const requestAnimationFrameRef = useRef<null | number>(null);
 	const particlesRef = useRef<Array<Particle>>([]);
@@ -71,7 +77,7 @@ export const useConfetti = () => {
 			if (requestAnimationFrameRef.current !== null) cancelAnimationFrame(requestAnimationFrameRef.current);
 			canvasElement.remove();
 		}
-	}, []);
+	}, [config]);
 
 	const throwConfetti = useCallback((count: number, origin?: { x: number; y: number }) => {
 		console.log(`throwing confetti`)
@@ -89,7 +95,7 @@ export const useConfetti = () => {
 			return particle;
 		});
 		particlesRef.current = [...particlesRef.current, ...newConfetti]
-	}, []);
+	}, [config]);
 
 	return { throwConfetti };
 }

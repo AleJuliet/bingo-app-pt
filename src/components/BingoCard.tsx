@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { useScreenshot, createFileName } from "use-react-screenshot";
 
 import { useSave } from "../hooks/useSave.ts";
-import { useConfetti } from "../hooks/useConfetti.ts";
 
 import "./BingoCard.css";
+import { useConfetti } from "../hooks/useConfetti.ts";
 
 export type Card = (number | null)[][];
 export type CardMarked = boolean[][];
@@ -23,7 +23,11 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [image, takeScreenShot] = useScreenshot();
   const [error, setError] = useState<string>();
 
-  const { throwConfetti } = useConfetti();
+  const { throwConfetti } = useConfetti({
+    imagePath: "",
+    size: 0,
+    weight: 0
+  });
 
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });
 
