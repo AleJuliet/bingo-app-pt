@@ -4,6 +4,7 @@ import { useScreenshot, createFileName } from "use-react-screenshot";
 import { useSave } from "../hooks/useSave.ts";
 
 import "./BingoCard.css";
+import { useConfetti } from "../hooks/useConfetti.ts";
 
 export type Card = (number | null)[][];
 export type CardMarked = boolean[][];
@@ -22,6 +23,12 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [image, takeScreenShot] = useScreenshot();
   const [error, setError] = useState<string>();
 
+  const { throwConfetti } = useConfetti({
+    imagePath: "",
+    size: 0,
+    weight: 0
+  });
+
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });
 
   // Mounting hook
@@ -36,7 +43,6 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
     const savedState = load();
     if (savedState !== null) setMarked(savedState);
     setIsLoading(false);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Save state on marking change
@@ -44,9 +50,12 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
     if (!isLoading) save(marked);
   }, [isLoading, marked, save]);
 
-  const toggleNumber = (rowIndex, colIndex) => {
+  const toggleNumber = (rowIndex: number, colIndex: number, coordinates: { x: number, y: number }) => {
     const updatedMarked = [...marked];
     updatedMarked[rowIndex][colIndex] = !updatedMarked[rowIndex][colIndex];
+    if (updatedMarked[rowIndex][colIndex]) {
+      throwConfetti(5, coordinates);
+    }
     setMarked(updatedMarked);
   };
 
@@ -59,7 +68,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   }
 
   //Uses the screenshot hook to download the image
-  const download = (image, { name = "bingoWinnerCard", extension = "jpg" } = {}) => {
+  const download = (image: string, { name = "bingoWinnerCard", extension = "jpg" } = {}) => {
     const a = document.createElement("a");
     a.href = image;
     a.download = createFileName(extension, name);
@@ -99,8 +108,8 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
                       key={colIndex}
                       className={`bingo-cell ${marked[rowIndex][colIndex] ? "marked" : ""
                         } ${num ? "" : "empty"}`}
-                      onClick={() => {
-                        if (num) toggleNumber(rowIndex, colIndex);
+                      onClick={(e) => {
+                        if (num) toggleNumber(rowIndex, colIndex, { x: e.pageX, y: e.pageY });
                       }}
                     >
                       {num || ""}
