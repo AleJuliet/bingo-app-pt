@@ -1,578 +1,368 @@
 [
-  {
-    "name": "Udita",
-    "grid": [
-      [7, null, 41, 61, 82, null, null, null, null],
-      [16, 26, null, null, 59, 62, 75, null, null],
-      [null, 31, 46, 48, null, null, null, 85, null]
-    ]
-  },
-  {
-    "name": "Kasper",
-    "grid": [
-      [7, null, 25, null, 41, null, 61, null, 82],
-      [null, null, null, 31, 46, 59, 62, 75, null],
-      [null, 16, 26, null, 48, null, 63, null, 85]
-    ]
-  },
-  {
-    "name": "Seval",
-    "grid": [
-      [null, 15, null, 33, null, 55, null, 71, 81],
-      [2, 17, null, 36, 41, 57, null, null, null],
-      [8, 19, 23, null, 48, null, 69, null, null]
-    ]
-  },
-  {
-    "name": "Karl",
-    "grid": [
-      [null, 11, null, null, 40, null, 60, 75, 81],
-      [1, null, 21, 30, 46, 59, null, null, null],
-      [null, 12, null, 34, 47, null, 62, null, 83]
-    ]
-  },
-  {
-    "name": "Kirsten",
-    "grid": [
-      [null, null, 26, null, 42, 51, null, 77, 84],
-      [null, null, 29, 37, 44, null, 62, null, 87],
-      [6, 11, null, null, 48, 54, null, null, 88]
-    ]
-  },
-  {
-    "name": "Morten",
-    "grid": [
+  [
+    [7, null, 41, 61, 82, null, null, null, null],
+    [16, 26, null, null, 59, 62, 75, null, null],
+    [null, 31, 46, 48, null, null, null, 85, null]
+  ],
+  [
+    [7, null, 25, null, 41, null, 61, null, 82],
+    [null, null, null, 31, 46, 59, 62, 75, null],
+    [null, 16, 26, null, 48, null, 63, null, 85]
+  ],
+  [
+    [null, 15, null, 33, null, 55, null, 71, 81],
+    [2, 17, null, 36, 41, 57, null, null, null],
+    [8, 19, 23, null, 48, null, 69, null, null]
+  ],
+  [
+    [null, 11, null, null, 40, null, 60, 75, 81],
+    [1, null, 21, 30, 46, 59, null, null, null],
+    [null, 12, null, 34, 47, null, 62, null, 83]
+  ],
+  [
+    [null, null, 26, null, 42, 51, null, 77, 84],
+    [null, null, 29, 37, 44, null, 62, null, 87],
+    [6, 11, null, null, 48, 54, null, null, 88]
+  ],
+  [
       [3, null, 21, null, 45, 52, null, 76, null],
       [null, 12, null, 31, null, null, 62, 77, 83],
       [6, 14, null, 35, 47, 53, null, null, null]
-    ]
-  },
-  {
-    "name": "Simon",
-    "grid": [
+  ],
+  [
       [4, null, 21, null, 43, 50, null, null, 84],
       [null, 11, 24, 33, null, 52, null, null, null],
       [null, 14, 25, 37, null, null, 65, 77, 86]
-    ]
-  },
-  {
-    "name": "Bjarki",
-    "grid": [
-      [null, 13, null, 30, 45, null, null, 77, 89],
-      [3, 14, 25, null, null, null, 63, null, 90],
-      [6, null, null, 36, 46, 59, 68, null, null]
-    ]
-  },
-  {
-    "name": "Erik",
-    "grid": [
+  ],
+  [
+    [null, 13, null, 30, 45, null, null, 77, 89],
+    [3, 14, 25, null, null, null, 63, null, 90],
+    [6, null, null, 36, 46, 59, 68, null, null]
+  ],
+  [
       [null, 10, 21, null, 49, 51, null, null, 86],
       [4, 15, 25, 31, null, null, null, null, 87],
       [6, null, 28, null, null, null, 65, 77, 89]
-    ]
-  },
-  {
-    "name": "Allan",
-    "grid": [
+  ],
+  [
       [5, null, null, null, 40, 52, null, 73, 84],
       [9, null, null, 30, null, 53, null, 78, 87],
       [null, 18, 22, null, 45, 54, 61, null, null]
-    ]
-  },
-  {
-    "name": "Oleksandr",
-    "grid": [
+  ],
+  [
       [null, null, null, 33, null, 54, 68, 78, 90],
       [1, 14, 21, 34, 40, null, null, null, null],
       [6, 15, null, 37, 43, 59, null, null, null]
-    ]
-  },
-  {
-    "name": "Tina",
-    "grid": [
+  ],
+  [
       [1, 18, 21, 32, null, null, null, null, 81],
       [3, null, null, 33, null, null, 62, 72, 82],
       [6, null, 26, 38, 48, 56, null, null, null]
-    ]
-  },
-  {
-    "name": "Jesper",
-    "grid": [
+  ],
+  [
       [null, null, 21, 35, 42, null, 66, 70, null],
       [3, 18, 25, null, null, 50, 68, null, null],
       [8, null, 29, null, null, 57, null, 76, 86]
-    ]
-  },
-  {
-    "name": "Vasco",
-    "grid": [
+  ],
+  [
       [6, null, null, 30, 41, 56, null, null, 81],
       [null, null, 28, 31, 49, null, 62, null, 89],
       [null, 19, 29, 32, null, null, 66, 75, null]
-    ]
-  },
-  {
-    "name": "Lars",
-    "grid": [
+  ],
+  [
       [null, null, null, null, 49, 57, 60, 72, 80],
       [null, null, 28, 33, null, null, 68, 73, 86],
       [9, 15, null, null, null, null, 69, 75, 90]
-    ]
-  },
-  {
-    "name": "Bjarke",
-    "grid": [
+  ],
+  [
       [null, null, 20, 34, null, 53, 69, 71, null],
       [5, null, 27, 37, null, null, null, 73, 82],
       [null, 14, null, 38, 48, null, null, 76, 84]
-    ]
-  },
-  {
-    "name": "David",
-    "grid": [
+  ],
+  [
       [3, 14, 21, null, null, null, 61, null, 83],
       [5, 19, 26, null, null, 55, 67, null, null],
       [8, null, 29, 35, 46, null, null, 79, null]
-    ]
-  },
-  {
-    "name": "Sebastian",
-    "grid": [
+  ],
+  [
       [4, 10, null, 39, null, null, null, 70, 84],
       [null, 18, null, null, 40, 52, 64, 74, null],
       [8, 19, 20, null, 41, null, null, null, 89]
-    ]
-  },
-  {
-    "name": "Wiktoria",
-    "grid": [
+  ],
+  [
       [null, 12, 22, 30, null, 57, null, 70, null],
       [4, 13, 26, 33, null, null, null, 75, null],
       [5, 14, null, null, 48, null, 65, null, 87]
-    ]
-  },
-  {
-    "name": "Kristian",
-    "grid": [
+  ],
+  [
       [1, null, 21, 31, 40, null, null, 71, null],
       [null, 14, 24, 36, 44, null, null, null, 80],
       [null, 15, null, null, 49, 53, 63, 74, null]
-    ]
-  },
-  {
-    "name": "Susanne",
-    "grid": [
+  ],
+  [
       [2, null, 24, 32, 44, null, null, null, 83],
       [null, 11, null, 34, null, null, 66, 70, 86],
       [9, 17, 26, null, 47, 53, null, null, null]
-    ]
-  },
-  {
-    "name": "Cat",
-    "grid": [
+  ],
+  [
       [null, 16, 25, 33, 43, null, null, 73, null],
       [1, null, null, null, null, 53, 66, 74, 80],
       [null, 18, 29, 36, null, null, null, 76, 89]
-    ]
-  },
-  {
-    "name": "Jakub",
-    "grid": [
+  ],
+  [
       [4, null, 21, null, 40, 59, null, null, 80],
       [6, 14, null, 34, null, null, 61, null, 87],
       [null, 19, 26, null, null, null, 69, 79, 89]
-    ]
-  },
-  {
-    "name": "Michael",
-    "grid": [
+  ],
+  [
       [4, 10, null, 37, null, null, 62, 74, null],
       [6, 18, 20, null, null, null, 65, null, 87],
       [9, null, null, 38, 48, 58, 68, null, null]
-    ]
-  },
-  {
-    "name": "Jakob",
-    "grid": [
+  ],
+  [
       [null, 13, null, 34, 40, 57, null, null, 82],
       [5, null, null, 35, null, null, 61, 77, 86],
       [null, 18, 22, 38, 45, null, 62, null, null]
-    ]
-  },
-  {
-    "name": "Martin",
-    "grid": [
+  ],
+  [
       [8, 11, null, 32, 41, 51, null, null, null],
       [null, null, 22, null, null, 54, 69, 74, 85],
       [null, null, 28, 39, 44, 57, null, null, 89]
-    ]
-  },
-  {
-    "name": "Christian Meza",
-    "grid": [
+  ],
+  [
       [null, null, 22, 32, 44, 50, null, 75, null],
       [3, 13, null, null, null, 51, 61, null, 86],
       [8, null, 25, 35, null, 52, null, null, 90]
-    ]
-  },
-  {
-    "name": "Nicolai",
-    "grid": [
+  ],
+  [
       [null, null, 21, 34, null, 50, 60, 71, null],
       [null, null, 23, null, 44, 57, null, 76, 89],
       [9, 17, null, null, 46, 58, 66, null, null]
-    ]
-  },
-  {
-    "name": "Malene",
-    "grid": [
+  ],
+  [
       [1, 18, null, null, 46, 55, 60, null, null],
       [null, null, 29, 32, null, 58, null, 70, 83],
       [6, 19, null, null, null, 59, 63, 77, null]
-    ]
-  },
-  {
-    "name": "Sindhu ",
-    "grid": [
+  ],
+  [
       [null, null, null, 30, 41, null, 62, 70, 84],
       [4, 16, null, null, 48, 58, null, 75, null],
       [null, 17, 28, 34, null, null, 67, null, 89]
-    ]
-  },
-  {
-    "name": "Kim",
-    "grid": [
+  ],
+  [
       [null, null, 24, 35, null, 57, null, 72, 84],
       [null, 10, 28, 37, 45, null, 61, null, null],
       [9, 13, 29, 38, null, null, null, 77, null]
-    ]
-  },
-  {
-    "name": "Jesper",
-    "grid": [
+  ],
+  [
       [null, 10, 26, 30, null, null, 65, null, 84],
       [6, 14, null, 31, null, null, null, 70, 85],
       [9, null, null, 35, 44, 53, 67, null, null]
-    ]
-  },
-  {
-    "name": "Mads",
-    "grid": [
+  ],
+  [
       [2, 12, null, 32, null, null, 63, null, 80],
       [null, null, 20, null, 43, 51, null, 72, 83],
       [5, null, 25, null, 47, null, null, 77, 86]
-    ]
-  },
-  {
-    "name": "Cecilie",
-    "grid": [
+  ],
+  [
       [null, 19, 27, null, 40, 52, 63, null, null],
       [9, null, null, 33, 42, null, null, 70, 88],
       [null, null, null, 35, 46, 59, null, 79, 90]
-    ]
-  },
-  {
-    "name": "Daniel",
-    "grid": [
+  ],
+  [
       [9, 11, null, null, null, null, 60, 71, 82],
       [null, 13, null, null, 40, null, 63, 77, 89],
       [null, null, 23, 33, 46, 57, 65, null, null]
-    ]
-  },
-  {
-    "name": "Per",
-    "grid": [
+  ],
+  [
       [3, null, 21, 32, null, 50, null, 72, null],
       [null, null, null, 34, 48, 53, 64, 73, null],
       [null, 15, null, null, null, 54, 69, 79, 89]
-    ]
-  },
-  {
-    "name": "Jia",
-    "grid": [
+  ],
+  [
       [null, null, 22, 33, 41, 55, 60, null, null],
       [null, null, 29, 38, 46, 57, 62, null, null],
       [5, 16, null, null, null, null, 67, 73, 88]
-    ]
-  },
-  {
-    "name": "Morten",
-    "grid": [
+  ],
+  [
       [null, null, 23, 36, 41, null, 61, null, 82],
       [null, 10, null, null, 42, null, 66, 76, 85],
       [7, null, 26, null, 48, 50, null, null, 88]
-    ]
-  },
-  {
-    "name": "Alechandrina",
-    "grid": [
+  ],
+  [
       [2, null, null, null, 43, 54, 63, null, 80],
       [null, null, 23, 32, 44, null, 64, 78, null],
       [6, 16, null, 33, 48, null, 68, null, null]
-    ]
-  },
-  {
-    "name": "Steffan",
-    "grid": [
+  ],
+  [
       [1, 14, null, 31, null, null, 66, null, 85],
       [null, 16, 29, null, 47, 56, null, 70, null],
       [null, 18, null, 37, null, null, 68, 75, 90]
-    ]
-  },
-  {
-    "name": "Thomas",
-    "grid": [
+  ],
+  [
       [null, null, null, null, 42, 50, 60, 71, 85],
       [null, 15, 24, 32, null, 56, null, 75, null],
       [2, null, null, 38, 49, 58, null, 77, null]
-    ]
-  },
-  {
-    "name": "Mads",
-    "grid": [
+  ],
+  [
       [null, 11, 23, null, null, 51, null, 76, 80],
       [8, null, null, 33, 45, null, null, 77, 89],
       [null, 18, 25, null, 48, 53, 60, null, null]
-    ]
-  },
-  {
-    "name": "Matt",
-    "grid": [
+  ],
+  [
       [8, 18, null, 30, null, 55, null, 71, null],
       [null, null, 26, null, 45, 56, null, 74, 88],
       [null, null, null, 32, 47, 59, 69, 76, null]
-    ]
-  },
-  {
-    "name": "Tony",
-    "grid": [
+  ],
+  [
       [3, null, null, null, 41, 50, 63, null, 82],
       [null, 14, 23, 31, 42, null, null, null, 90],
       [null, 16, null, null, 48, 57, 64, 72, null]
-    ]
-  },
-  {
-    "name": "Nuno",
-    "grid": [
+  ],
+  [
       [1, 17, null, null, 43, 52, null, 70, null],
       [null, null, null, 34, null, 53, 64, 75, 81],
       [5, null, 20, null, 47, 54, null, 77, null]
-    ]
-  },
-  {
-    "name": "Henry",
-    "grid": [
+  ],
+  [
       [null, 10, 28, 31, null, 51, null, 77, null],
       [null, 13, null, 32, 47, 52, 63, null, null],
       [8, null, null, 35, null, 55, 69, null, 89]
-    ]
-  },
-  {
-    "name": "Sandie",
-    "grid": [
+  ],
+  [
       [3, null, null, null, 46, null, 62, 74, 81],
       [4, 12, 24, null, 47, null, null, 75, null],
       [null, 17, 26, 38, null, 55, null, 78, null]
-    ]
-  },
-  {
-    "name": "Mathias",
-    "grid": [
+  ],
+  [
       [3, null, 22, null, null, null, 65, 76, 80],
-      [null, null, null, 31, 42, 53, null, 78, 85],
+      [null, null, null,  31, 42, 53, null, 78, 85],
       [null, 15, 24, null, null, 54, 68, null, 88]
-    ]
-  },
-  {
-    "name": "Dennis",
-    "grid": [
+  ],
+  [
       [null, 13, null, null, 44, 56, 60, null, 81],
       [null, 16, 25, 35, null, null, null, 79, 84],
       [1, 17, 27, null, 48, null, null, null, 86]
-    ]
-  },
-  {
-    "name": "Nicole",
-    "grid": [
+  ],
+  [
       [1, null, 22, 34, null, 51, null, 71, null],
       [2, null, null, 38, null, null, 66, 74, 81],
       [4, 13, 28, null, 42, 53, null, null, null]
-    ]
-  },
-  {
-    "name": "Udit",
-    "grid": [
+  ],
+  [
       [null, 14, 29, null, null, 55, null, 75, 84],
       [null, 15, null, 32, 48, null, 62, 77, null],
       [7, 16, null, 35, null, null, 67, null, 85]
-    ]
-  },
-  {
-    "name": "Tim",
-    "grid": [
+  ],
+  [
       [null, 11, 23, null, null, 56, null, 70, 80],
       [null, 12, null, 30, 41, 57, null, null, 82],
       [8, null, null, null, null, 58, 64, 72, 89]
-    ]
-  },
-  {
-    "name": "Alpana",
-    "grid": [
+  ],
+  [
       [7, 10, null, null, null, 52, null, 73, 86],
       [null, 11, 25, null, 46, null, 63, null, 87],
       [null, 16, null, 32, null, 59, null, 76, 88]
-    ]
-  },
-  {
-    "name": "Binwen",
-    "grid": [
+  ],
+  [
       [3, null, null, null, 43, 51, 61, 77, null],
       [5, null, 22, 30, null, null, null, 79, 85],
       [9, 18, null, null, 44, 58, 65, null, null]
-    ]
-  },
-  {
-    "name": "Steve",
-    "grid": [
+  ],
+  [
       [null, null, 26, null, 46, 50, null, 79, 80],
       [6, null, null, 37, null, 56, 64, null, 83],
       [null, 17, null, null, 48, 58, 65, null, 87]
-    ]
-  },
-  {
-    "name": "Lars",
-    "grid": [
-      [1, null, 25, null, 49, null, 62, 70, null],
-      [null, 19, null, 33, null, 52, 69, 73, null],
-      [2, null, null, 36, null, 54, null, 78, 84]
-    ]
-  },
-  {
-    "name": "Sara",
-    "grid": [
+  ],
+  [
+    [1, null, 25, null, 49, null, 62, 70, null],
+    [null, 19, null, 33, null, 52, 69, 73, null],
+    [2, null, null, 36, null, 54, null, 78, 84]
+  ],
+  [
       [9, null, null, null, 41, null, 61, 74, 81],
       [null, 10, 22, 35, null, 53, 66, null, null],
       [null, 12, 28, 38, 43, null, 68, null, null]
-    ]
-  },
-  {
-    "name": "Donald",
-    "grid": [
+  ],
+  [
       [null, null, null, 31, 40, 52, 64, null, 81],
       [5, 14, 27, null, 44, null, null, 70, null],
-      [null, 19, 28, null, 45, null, 67, 77, null]
-    ]
-  },
-  {
-    "name": "Guru",
-    "grid": [
+      [null, 19, 28, null, 45, null,  67, 77, null]
+  ],
+  [
       [null, 10, null, null, null, 53, 63, 77, 87],
       [2, 17, 22, null, 42, null, null, 78, null],
       [9, 18, null, 35, 44, null, null, null, 88]
-    ]
-  },
-  {
-    "name": "Jeanette",
-    "grid": [
+  ],
+  [
       [1, null, 23, 35, null, null, 63, null, 80],
       [null, null, 25, 36, 43, 56, null, 73, null],
       [8, 11, 26, 38, null, null, null, 79, null]
-    ]
-  },
-  {
-    "name": "Henrik",
-    "grid": [
+  ],
+  [
       [null, 14, 27, 36, 44, null, 62, null, null],
       [null, null, null, 37, 45, 58, null, 73, 81],
       [1, null, 28, 39, 47, null, 66, null, null]
-    ]
-  },
-  {
-    "name": "Akshay",
-    "grid": [
-      [3, null, 8, 14, null, 19, null, 22, null],
-      [27, 35, null, null, 41, null, 46, null, 53],
-      [null, 60, null, 68, null, 72, 84, null, 90]
-    ]
-  },
-  {
-    "name": "Thomas",
-    "grid": [
-      [1, 5, null, null, 11, null, 17, null, 24],
-      [29, null, 33, 40, null, 49, null, 52, null],
-      [null, 61, null, 69, 73, null, 79, null, 88]
-    ]
-  },
-  {
-    "name": "Chanyu",
-    "grid": [
-      [2, null, null, 9, 12, null, null, 18, 26],
-      [null, 31, 38, null, null, 44, 50, null, 57],
-      [63, null, 70, 76, null, 83, null, 89, null]
-    ]
-  },
-  {
-    "name": "Kim",
-    "grid": [
-      [null, 4, 6, null, 10, null, 15, 21, null],
-      [28, null, null, 34, null, 39, null, 47, 55],
-      [62, null, 66, null, 74, null, 80, null, 87]
-    ]
-  },
-  {
-    "name": "Martin",
-    "grid": [
-      [7, null, 13, null, null, 16, 20, null, 25],
-      [null, 30, null, 37, 43, null, null, 48, 51],
-      [64, null, 71, 75, null, 82, null, 86, null]
-    ]
-  },
-  {
-    "name": "Feifei",
-    "grid": [
-      [null, 8, 18, 23, null, null, 27, 32, null],
-      [36, null, null, null, 42, 54, null, 59, 65],
-      [67, 72, null, 78, null, 85, null, null, 90]
-    ]
-  },
-  {
-    "name": "Jana",
-    "grid": [
-      [1, 9, null, null, 11, null, null, 19, 24],
-      [null, null, 29, 33, null, 38, 46, null, 52],
-      [58, 63, null, 77, 81, null, 88, null, null]
-    ]
-  },
-  {
-    "name": "Raymond",
-    "grid": [
-      [2, null, 6, null, 10, null, 17, 21, null],
-      [null, 26, null, 31, null, 40, null, 44, 49],
-      [55, null, 62, 69, null, 73, null, null, 86]
-    ]
-  },
-  {
-    "name": "Susanne",
-    "grid": [
-      [null, 4, null, 7, 15, null, 18, null, 22],
-      [28, null, 36, null, null, 41, null, 47, 53],
-      [60, 70, null, 74, null, 82, null, 89, null]
-    ]
-  },
-  {
-    "name": "Tony",
-    "grid": [
-      [3, 5, null, null, 13, 16, null, 25, null],
-      [null, null, 30, 34, null, null, 39, 48, 56],
-      [61, 68, null, 72, null, 79, null, null, 83]
-    ]
-  },
-  {
-    "name": "Marie",
-    "grid": [
-      [5, null, 11, null, 18, null, 22, null, 29],
-      [null, 34, null,  40, null, 49, null, 53, null],
-      [61, null, 72, null, 77, null, 84, 88, null]
-    ]
-  }
+  ],
+  [
+    [3, null, 8, 14, null, 19, null, 22, null],
+    [27, 35, null, null, 41, null, 46, null, 53],
+    [null, 60, null, 68, null, 72, 84, null, 90]
+  ],
+  [
+    [1, 5, null, null, 11, null, 17, null, 24],
+    [29, null, 33, 40, null, 49, null, 52, null],
+    [null, 61, null, 69, 73, null, 79, null, 88]
+  ],
+  [
+    [2, null, null, 9, 12, null, null, 18, 26],
+    [null, 31, 38, null, null, 44, 50, null, 57],
+    [63, null, 70, 76, null, 83, null, 89, null]
+  ],
+  [
+    [null, 4, 6, null, 10, null, 15, 21, null],
+    [28, null, null, 34, null, 39, null, 47, 55],
+    [62, null, 66, null, 74, null, 80, null, 87]
+  ],
+  [
+    [7, null, 13, null, null, 16, 20, null, 25],
+    [null, 30, null, 37, 43, null, null, 48, 51],
+    [64, null, 71, 75, null, 82, null, 86, null]
+  ],
+  [
+    [null, 8, 18, 23, null, null, 27, 32, null],
+    [36, null, null, null, 42, 54, null, 59, 65],
+    [67, 72, null, 78, null, 85, null, null, 90]
+  ],
+  [
+    [1, 9, null, null, 11, null, null, 19, 24],
+    [null, null, 29, 33, null, 38, 46, null, 52],
+    [58, 63, null, 77, 81, null, 88, null, null]
+  ],
+  [
+    [2, null, 6, null, 10, null, 17, 21, null],
+    [null, 26, null, 31, null, 40, null, 44, 49],
+    [55, null, 62, 69, null, 73, null, null, 86]
+  ],
+  [
+    [null, 4, null, 7, 15, null, 18, null, 22],
+    [28, null, 36, null, null, 41, null, 47, 53],
+    [60, 70, null, 74, null, 82, null, 89, null]
+  ],
+  [
+    [3, 5, null, null, 13, 16, null, 25, null],
+    [null, null, 30, 34, null, null, 39, 48, 56],
+    [61, 68, null, 72, null, 79, null, null, 83]
+  ],
+  [
+    [6, null, 12, 20, null, null, 23, null, 31],
+    [null, 37, null, null, 42, 50, null, 57, 64],
+    [71, null, 75, null, 80, 85, null, 90, null]
+  ],
+  [
+    [1, 4, null, null, 9, 14, null, 18, null],
+    [null, null, 24, 27, null, null, 33, 38, 45],
+    [52, 66, null, 73, null, 78, null, null, 87]
+  ]
 ]
+  

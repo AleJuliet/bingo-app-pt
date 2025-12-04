@@ -1,0 +1,73 @@
+const names = [
+  "Udita Chakraborty",                         // Card 1
+  "kasper larsen",                             // Card 2
+  "Seval Mercan",                              // Card 3
+  "Karl Madsen",                               // Card 4
+  "Kirsten Fugl Elkjær",                       // Card 5
+  "Morten Porsing",                            // Card 6
+  "Simon Bruun",                               // Card 7
+  "Bjarki Mar Elíasson",                       // Card 8
+  "Erik Nordholm",                             // Card 9
+  "Allan Carlsen",                             // Card 10
+  "Oleksandr Ostapenko",                       // Card 11
+  "Tina Skov Olesen",                          // Card 12
+  "Jesper Jensen",                             // Card 13
+  "Vasco Patronilo",                           // Card 14
+  "Lars Toft Jacobsen",                        // Card 15
+  "Bjarke Holbæk Jensen",                      // Card 16
+  "David Anthony Parham",                      // Card 17
+  "Sebastian Dittmann",                        // Card 18
+  "Wiktoria Ciolek-Poniatowska",               // Card 19
+  "Kristian Thorsen",                          // Card 20
+  "Susanne Koch Johansen",                     // Card 21
+  "Cat Descure",                               // Card 22
+  "Jakub Cerovsky",                            // Card 23
+  "Michael Theilgaard Sig",                    // Card 24
+  "Jakob Enemark",                             // Card 25
+  "Martin Iversen",                            // Card 26
+  "Christian Meza",                            // Card 27
+  "Nicolai Kjellberg",                         // Card 28
+  "Malene Fris",                               // Card 29
+  "Sindhu Koratiker Rajappa",                  // Card 30
+  "Kim Steen Bekke",                           // Card 31
+  "Jesper Laursen",                            // Card 32
+  "Mads Justesen",                             // Card 33
+  "Cecilie Valentin Kjær",                     // Card 34
+  "Daniel Koh",                                // Card 35
+  "Per Christian Nielsen",                     // Card 36
+  "Jia Xi",                                    // Card 37
+  "Morten Lundsgaard Degn",                    // Card 38
+  "Alechandrina Julieta Pereira Espinoza",     // Card 39
+  "Steffan Brun",                              // Card 40
+  "Thomas Sørensen",                           // Card 41
+  "Mads Bach Christensen",                     // Card 42
+  "Matt Jensen",                               // Card 43
+  "Tony Yuwono",                               // Card 44
+  "Nuno Santos",                               // Card 45
+  "Henry He",                                  // Card 46
+  "Sandie Akkermans",                          // Card 47
+  "Mathias Juhl Kold Nielsen",                 // Card 48
+  "Dennis Gu （古东旭）",                       // Card 49
+  "Nicole Jin",                                // Card 50
+  "Udit Agarwal",                              // Card 51
+  "Tim Teglgaard Christensen",                 // Card 52
+  "Alpana Rani",                               // Card 53
+  "Binwen Wu",                                 // Card 54
+  "Steve guo",                                 // Card 55
+  "Lars Erik Petersen",                        // Card 56
+  "Sara Michaela Bech Madsen",                 // Card 57
+  "Donald Yu",                                 // Card 58
+  "Guru Vaidyanathan Venkateswaran",           // Card 59
+  "Jeanette Schiøth Krüger",                   // Card 60
+  "Henrik Bæksgaard Nielsen",                  // Card 61
+  "Akshay Mathew Joseph",                      // Card 62
+  "Thomas Kastrup",                            // Card 63
+  "Chanyu Yang",                               // Card 64
+  "Kim Hansen",                                // Card 65
+  "Martin Skovbo Faartoft",                    // Card 66
+  "Feifei Tang",                               // Card 67
+  "Jana Schmurr",                              // Card 68
+  "Raymond Cheung",                            // Card 69
+  "Susanne Krogh-Hansen",                      // Card 70
+  "Tony Liu"                                   // Card 71
+];
