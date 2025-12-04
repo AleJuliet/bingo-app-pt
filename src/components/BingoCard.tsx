@@ -24,9 +24,7 @@ const BingoCard = ({ card, cardIndex, onCardDeselect }: BingoCardProps) => {
   const [error, setError] = useState<string>();
 
   const { throwConfetti } = useConfetti({
-    imagePath: "",
-    size: 0,
-    weight: 0
+    gravity: 0.8,
   });
 
   const { load, save } = useSave({ cardId: cardIndex, saveId: 0, });

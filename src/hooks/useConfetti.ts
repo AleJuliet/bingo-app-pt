@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 
-export interface ConfettiConfig {
-	imagePath: string;
-	size: number;
-	weight: number;
+interface ConfettiConfig {
+	gravity: number;
 }
 
 interface Particle {
@@ -58,14 +56,14 @@ export const useConfetti = (config: ConfettiConfig) => {
 					y: particle.y + particle.vy,
 					vy: particle.vy + particle.gravity,
 					life: particle.life - 1,
-					color: particle.color
+					color: particle.color,
 				}
 			});
 
 			particlesRef.current = updatedParticles;
 
-			canvasContext.fillStyle = 'blue';
 			updatedParticles.forEach((particle) => {
+				canvasContext.fillStyle = particle.color;
 				canvasContext.fillRect(particle.x, particle.y, 30, 30);
 			});
 
@@ -80,16 +78,15 @@ export const useConfetti = (config: ConfettiConfig) => {
 	}, [config]);
 
 	const throwConfetti = useCallback((count: number, origin?: { x: number; y: number }) => {
-		console.log(`throwing confetti`)
 		const newConfetti: Array<Particle> = Array.from({ length: count }).map(() => {
 			const particle: Particle = {
 				x: origin?.x || Math.random() * (canvasRef.current?.width || window.innerWidth),
 				vx: (Math.random() * 13) - 5,
 				y: origin?.y || Math.random() * (canvasRef.current?.height || window.innerHeight),
-				vy: (Math.random() * -15) * 3,
-				gravity: 1,
+				vy: (Math.random() * -10) * 3,
+				gravity: config.gravity,
 				life: 1000,
-				color: "red"
+				color: `hsl(${Math.random() * 360}, 100%, 50%)`
 			}
 
 			return particle;
